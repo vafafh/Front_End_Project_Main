@@ -24,9 +24,8 @@ window.onclick = function(event) {
   }
 }
 
-$("#allcatg").click(function(e){
-  e.preventDefault();
-      $(".dropdown-allcatg").toggle()
+$("#allcatg").click(function(){
+      $(".dropdown-category").toggle()
      
 })
 

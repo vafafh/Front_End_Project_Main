@@ -28,6 +28,57 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.klbth-icon-2-grid:before {
+    content: '\e802';
+}
+
+.klbth-icon-3-grid:before {
+    content: '\e803';
+}
+
+.klbth-icon-4-grid:before {
+    content: '\e801';
+}
+
+.klbth-icon-list-grid:before {
+    content: '\e805';
+}
+
+.klbth-icon-apple-juice:before {
+    content: '\e823';
+    color: #3e445a;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.klbth-icon-boiled-egg:before {
+    content: '\e809';
+    color: #3e445a;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.klbth-icon-snowflake:before {
+    content: '\e880';
+    cursor: pointer;
+    color: #3e445a;
+    margin-right: 10px;
+}
+
+.klbth-icon-candy:before {
+    cursor: pointer;
+    content: '\e828';
+    color: #3e445a;
+    margin-right: 10px;
+}
+
+.klbth-icon-vegan:before {
+    content: '\e813';
+    color: #3e445a;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
 .klbth-icon-phone-call:before {
     content: '\e892';
 }
@@ -47,7 +98,7 @@
 
 .klbth-icon-milk-box:before {
     content: '\e8a8';
-    font-size: 25px;
+    // font-size: 25px;
     margin-right: 10px;
     color: black;
 }
@@ -81,15 +132,13 @@
     font-size: 20px;
 }
 
+.klbth-icon-location:before {
+    content: '\e800';
+
+}
+
 .klbth-icon-mail:before {
     content: '\e84f';
-    color: rgba(102, 102, 102, 0.531);
-    font-size: 18px;
-    display: flex;
-    justify-content: center;
-    padding-left: 10px;
-    align-items: center;
-    width: 5%;
 }
 
 .klbth-icon-user:before {
@@ -113,55 +162,25 @@
 
 .klbth-icon-meat:before {
     content: '\e873';
-    font-size: 20px;
-    color: #949494;
-    margin-right: 7px;
+    // font-size: 20px;
+    margin-right: 10px;
+    color: #3e445a;
 }
 
 .klbth-icon-biscuit:before {
     content: '\e81b';
-    font-size: 20px;
-    color: #949494;
-    margin-right: 7px;
+    // font-size: 20px;
+    margin-right: 10px;
+    color: #3e445a;
 }
 
 .klbth-icon-cup:before {
     content: '\e867';
-    font-size: 20px;
-    color: #949494;
-    margin-right: 7px;
-}
-.klbth-icon-apple-juice:before {
-    content: '\e823';
-    color: #949494;
-    cursor: pointer;
-    margin-right: 10px;
-}
-.klbth-icon-boiled-egg:before {
-    content: '\e809';
-    color: #949494;
-    margin-right: 10px;
-    cursor: pointer;
-}
-.klbth-icon-snowflake:before {
-    content: '\e880';
-    cursor: pointer;
-    color: #949494;
-    margin-right: 10px;
-}
-.klbth-icon-candy:before {
-    cursor: pointer;
-    content: '\e828';
-    color: #949494;
+    // font-size: 20px;
+    color: #3e445a;
     margin-right: 10px;
 }
 
-.klbth-icon-vegan:before {
-    content: '\e813';
-    color: #949494;
-    cursor: pointer;
-    margin-right: 10px;
-}
 
 
 
