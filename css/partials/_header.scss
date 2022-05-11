@@ -4,6 +4,10 @@ a {
 
 header {
 
+    #Phone{
+        display: none;
+    }
+
     .header-1 {
         display: block;
         font-size: 14px;
@@ -20,6 +24,7 @@ header {
     }
 
     .header-2 {
+        display: block;
         font-size: 12px;
         font-weight: 100;
         font-family: Arial, Helvetica, sans-serif;
@@ -168,6 +173,7 @@ header {
     }
 
     .header-3 {
+        display: block;
         font-family: Arial, Helvetica, sans-serif;
 
         .left {
@@ -376,13 +382,14 @@ header {
     }
 
     .header-4 {
+        display: block;
         border-bottom: 1px solid #e3e4e6;
         font-family: Arial, Helvetica, sans-serif;
 
         .box-left {
             position: relative;
 
-            #allcatg {
+            .allcatg {
                 display: flex;
                 user-select: none;
                 justify-content: space-between;
@@ -416,6 +423,7 @@ header {
 
             .dropdown-category{
                 position: absolute;
+                display: none;
                 font-size: 14px;
                 cursor: pointer;
                 background-color: rgb(255, 255, 255);
@@ -426,7 +434,6 @@ header {
                 padding: 20px 0;
                 .menu{
                     padding: 10px 20px;
-                    // position: relative;
                     &:hover .main-p{
                         color: #2BBEF9;
 
@@ -580,11 +587,307 @@ header {
 }
 
 
+
 @media screen and (max-width: 576px){
     header{
-       .header-1{
-        display: none;
-    } 
+        .header-1,.header-2,.header-3,.header-4{
+            display: none;
+        }
+       
+        #Phone{
+        display: block;
+        .header-top{
+            font-size: 12px;
+            background-color: $blue;
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 15px 0;
+            color: white;
+    
+            b {
+                font-weight: bold;
+            }
+        }
+        .header-bottom{
+            padding: 15px 0;
+            border-bottom: 1px solid #e3e4e6 ;
+            .center-div{
+                img{
+                    width: 40%
+                };
+            }
+            .right-div{
+                position: relative;
+                .shopicon::before{
+                    background-color: white;
+                    color: black;
+                    
+                }
+                span{
+                    position: absolute;
+                    background-color: red;
+                    padding: 1px 5px;
+                    border-radius: 50%;
+                    position: absolute;
+                    left: 23px;
+                    bottom: 18px;
+                }
+
+            }
+        }
+
+        .phone-sidebar{
+            // display: none;
+            font-family: Arial, Helvetica, sans-serif;
+            height: 100%;
+            width:0;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: rgb(255, 255, 255);
+            overflow: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            .header-main{ 
+                .header-first{
+                    padding: 20px 0;
+                    .left{
+                        img{
+                            width: 70%;
+                        }
+                    }
+                    .right{
+                        i{
+                            font-size: 25px;
+                            color:#cacaca;
+                        }
+                    }
+                }
+
+                .header-second{
+                    padding: 10px 0;
+                    .box-modal {
+
+                        border: 1px solid #d9d9e9;
+                        border-radius: 8px;
+                        width: 100%;
+                        padding: 10px 20px;
+        
+                        .left {
+                            .spn1 {
+                                font-size: 12px;
+                                color: #afafb6;
+                                margin-bottom: 10px;
+                            }
+        
+                            .spn2 {
+                                font-size: 14px;
+                                color: $blue;
+                                font-weight: bold;
+                            }
+                        }
+        
+                        .right {
+                            i {
+                                color: #afafb6;
+                            }
+                        }
+                    }
+
+                    .modal {
+                        display: none;
+                        /* Hidden by default */
+                        position: fixed;
+                        /* Stay in place */
+                        z-index: 1;
+                        /* Sit on top */
+                        padding-top: 100px;
+                        /* Location of the box */
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        /* Full width */
+                        height: 100%;
+                        /* Full height */
+                        overflow: auto;
+                        /* Enable scroll if needed */
+                        background-color: rgb(0, 0, 0);
+                        /* Fallback color */
+                        background-color: rgba(0, 0, 0, 0.4);
+                        /* Black w/ opacity */
+            
+                    }
+            
+                    /* Modal Content */
+                    .modal-content {
+                        background-color: #fefefe;
+                        margin: auto;
+                        padding: 20px;
+                        border: 1px solid #888;
+                        width: 90%;
+                        height: 550px;
+                        font-family: Arial, Helvetica, sans-serif;
+            
+                        h1 {
+                            font-size: 15px;
+                            font-weight: bold;
+                            margin: 10px 0;
+                        }
+            
+                        p {
+                            font-size: 12px;
+                        }
+            
+                        .box-input {
+                            width: 100%;
+                            padding: 15px;
+                            margin: 20px 0;
+                            align-items: center;
+                            background-color: #f7f7f7;
+                            border-radius: 8px;
+            
+                            input {
+                                background-color: transparent;
+                                outline: none;
+                                border: none;
+                                width: 100%;
+            
+                            }
+            
+                            svg {
+                                width: 20px;
+                                margin-right: 10px;
+                                color: #888;
+                            }
+            
+                        }
+            
+                        .list {
+                            overflow-y: scroll;
+            
+                            ul {
+                                li {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    align-items: center;
+                                    padding: 10px 0;
+                                    font-size: 14px;
+                                    border-bottom: 1px solid #e3e4e6;
+                                }
+                            }
+            
+                            button {
+                                border: 1px solid #e3e4e6;
+                                background-color: transparent;
+                                margin-right: 10px;
+                                border-radius: 15px;
+                                padding: 5px;
+                                width: 90px;
+                            }
+                        }
+                    }
+                }
+
+                .header-third{
+                    .box-left {
+                        position: relative;
+            
+                        .allcatg {
+                            display: flex;
+                            user-select: none;
+                            justify-content: space-between;
+                            align-items: center;
+                            position: relative;
+                            width: 100%;
+                            background-color: #2BBEF9;
+                            padding: 18px 20px;
+                            border-radius: 10px;
+                            color: white;
+                            cursor: pointer;
+            
+                        }
+            
+                        .dropdown-category{
+                            position: absolute;
+                            display: none;
+                            font-size: 14px;
+                            cursor: pointer;
+                            background-color: rgb(255, 255, 255);
+                            // border:  1px solid #e3e4e6;
+                            width: 100%;
+                            top: 69px;
+                            left: 2px;
+                            padding: 20px 0;
+                            .menu{
+                                padding: 10px 20px;
+                                &:hover .main-p{
+                                    color: #2BBEF9;
+            
+                                }
+                                &:hover .icon::before{
+                                    color:#2BBEF9;
+                                }
+            
+                               
+            
+                            }
+                          
+                        }
+            
+            
+            
+                       
+            
+            
+                    }
+                }
+
+             
+
+
+            }
+
+            #Phone-section{
+                
+              
+                    .nav-list {
+                        
+
+                        ul {
+                            list-style: none;
+                            font-size: 14px;
+                            font-weight: 500;
+                            padding-left: 0;
+                            padding-top: 20px;
+        
+                            li {
+                                display: flex;
+                                align-items: center;
+                                justify-content: space-between;
+                                border-bottom: 0.5px solid rgba(212, 212, 212, 0.521);
+                                padding: 15px 20px;
+        
+                                a {
+                                    color: black;
+        
+                                }
+        
+                                i {
+                                    margin-right: 10px;
+        
+                                }
+        
+                                .icondown {
+                                    font-size: 13px;
+                                }
+                            }
+                        }
+                    }
+                
+            }
+        }
+      }
     }
+  
     
 }
