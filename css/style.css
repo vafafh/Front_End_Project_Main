@@ -172,6 +172,11 @@
   margin-right: 10px;
 }
 
+.klbth-icon-mail:before {
+  content: '\e84f';
+  font-size: 15px;
+}
+
 /*#endregion Icons do not open it is too big press alt z*/
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -348,21 +353,21 @@ table {
   margin-bottom: 20px;
 }
 
-#Section3 {
+#Section3, #Section6, #Section9 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#Section3 .left h5 {
+#Section3 .left h5, #Section6 .left h5, #Section9 .left h5 {
   font-weight: bold;
 }
 
-#Section3 .left p {
+#Section3 .left p, #Section6 .left p, #Section9 .left p {
   font-size: 13px;
   margin-top: 10px;
   color: gray;
 }
 
-#Section3 .right a {
+#Section3 .right a, #Section6 .right a, #Section9 .right a {
   text-align: center;
   color: #707070;
   font-size: 14px;
@@ -371,7 +376,7 @@ table {
   border-radius: 40px;
 }
 
-#Section3 .right a i {
+#Section3 .right a i, #Section6 .right a i, #Section9 .right a i {
   margin-left: 5px;
 }
 
@@ -454,50 +459,22 @@ table {
   margin-left: 5px;
 }
 
-#Section6 {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-#Section6 .left h5 {
-  font-weight: bold;
-}
-
-#Section6 .left p {
-  font-size: 13px;
-  margin-top: 10px;
-  color: gray;
-}
-
-#Section6 .right a {
-  text-align: center;
-  color: #707070;
-  font-size: 14px;
-  padding: 7px 18px;
-  border: 1px solid rgba(128, 128, 128, 0.726);
-  border-radius: 40px;
-}
-
-#Section6 .right a i {
-  margin-left: 5px;
-}
-
 #Section7 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
 #Section7 .all {
   padding-left: 0 !important;
-  border: 1px solid red;
+  border: 0.1px solid rgba(221, 221, 221, 0.623);
+  border-radius: 10px;
 }
 
 #Section7 .all .left-box {
+  background-image: url("/image/category-banner-1.jpg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
   position: relative;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-
-#Section7 .all .left-box .box-background img {
-  border-top-left-radius: 10px;
 }
 
 #Section7 .all .left-box .text {
@@ -532,38 +509,360 @@ table {
   border-radius: 40px;
 }
 
-#Section7 .all .mycard img {
-  width: 100%;
+#Section7 .all .mycard {
+  cursor: pointer;
+  overflow: hidden;
 }
 
-#Section7 .all .mycard .bottom-btn {
-  display: none;
+#Section7 .all .mycard ul li {
+  margin: 10px 0;
 }
 
-#Section7 .all .mycard .bottom-btn .btn-cart {
-  padding: 8px 60px;
-  background-color: #FFCD00;
-  border-radius: 40px;
+#Section7 .all .mycard ul li:nth-child(1) {
+  font-weight: bold;
+  font-size: 14px;
 }
 
-#Section7 .all .mycard:hover .bottom-btn {
-  display: block;
+#Section7 .all .mycard ul li:nth-child(1):hover {
+  color: #233A95;
 }
 
-#Section7 .all .mycard ul li i {
+#Section7 .all .mycard ul li:nth-child(2) p {
+  font-size: 12px;
+  color: #00B853;
+  font-weight: bold;
+}
+
+#Section7 .all .mycard ul li:nth-child(2) p span {
+  margin-right: 10px;
+  color: gray;
+  font-weight: normal;
+}
+
+#Section7 .all .mycard ul li:nth-child(3) i {
   font-size: 12px;
   color: #FFCD00;
 }
 
-#Section7 .all .mycard ul li:nth-child(3) span:nth-child(1) {
+#Section7 .all .mycard ul li:nth-child(4) span:nth-child(1) {
   color: gray;
   font-size: 12px;
 }
 
-#Section7 .all .mycard ul li:nth-child(3) span:nth-child(2) {
+#Section7 .all .mycard ul li:nth-child(4) span:nth-child(2) {
   color: #D51243;
   font-weight: bold;
   font-size: 14px;
+}
+
+#Section7 .all .mycard ul .btn-add {
+  text-align: center;
+  opacity: 0;
+  visibility: 0;
+}
+
+#Section7 .all .mycard ul .btn-add a {
+  background-color: #233A95 !important;
+  border-radius: 50px !important;
+  padding: 5px 30px !important;
+}
+
+#Section7 .all .mycard:hover {
+  overflow: visible;
+  z-index: 121;
+}
+
+#Section7 .all .mycard:hover .btn-add {
+  opacity: 1 !important;
+  z-index: 12;
+  visibility: 1 !important;
+}
+
+#Section7 .all .secondlg4 .top a {
+  display: block;
+  color: #4d4d4d;
+  margin: 20px;
+}
+
+#Section7 .all .secondlg4 .top a:hover {
+  color: #2BBEF9;
+}
+
+#Section7 .all .secondlg4 .bottom a {
+  color: #233A95;
+  margin-left: 20px;
+}
+
+#Section8 {
+  padding: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Section8 .text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  padding: 25px 0;
+  background-color: #FFEEF2;
+}
+
+#Section8 .text span a {
+  color: #ED174A;
+}
+
+#Section8 .text span:nth-child(1) {
+  font-size: 18px;
+}
+
+#Section8 .text span:nth-child(1) a:nth-child(2) {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+#Section8 .text span .btn {
+  border: 1px dotted red;
+  border-radius: 30px;
+  padding: 8px 35px;
+  border-width: 2px;
+}
+
+#Section10 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Section10 .all {
+  padding-left: 0 !important;
+  border: 0.1px solid rgba(221, 221, 221, 0.623);
+  border-radius: 10px;
+}
+
+#Section10 .all .left-box {
+  background-image: url("/image/category-banner-2.jpg");
+  background-position: center;
+  background-size: cover;
+  border-top-left-radius: 10px;
+  position: relative;
+}
+
+#Section10 .all .left-box .text {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+#Section10 .all .left-box .text p {
+  margin: 20px 0;
+}
+
+#Section10 .all .left-box .text p:nth-child(1) {
+  font-size: 19px;
+}
+
+#Section10 .all .left-box .text p:nth-child(2) {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+#Section10 .all .left-box .text p:nth-child(3) {
+  font-size: 15px;
+}
+
+#Section10 .all .left-box .text a {
+  text-align: center;
+  background-color: #233A95;
+  color: white;
+  font-size: 14px;
+  padding: 7px 15px;
+  border-radius: 40px;
+}
+
+#Section10 .all .mycard {
+  cursor: pointer;
+  overflow: hidden;
+}
+
+#Section10 .all .mycard ul li {
+  margin: 10px 0;
+}
+
+#Section10 .all .mycard ul li:nth-child(1) {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#Section10 .all .mycard ul li:nth-child(1):hover {
+  color: #233A95;
+}
+
+#Section10 .all .mycard ul li:nth-child(2) p {
+  font-size: 12px;
+  color: #00B853;
+  font-weight: bold;
+}
+
+#Section10 .all .mycard ul li:nth-child(2) p span {
+  margin-right: 10px;
+  color: gray;
+  font-weight: normal;
+}
+
+#Section10 .all .mycard ul li:nth-child(3) i {
+  font-size: 12px;
+  color: #FFCD00;
+}
+
+#Section10 .all .mycard ul li:nth-child(4) span:nth-child(1) {
+  color: gray;
+  font-size: 12px;
+}
+
+#Section10 .all .mycard ul li:nth-child(4) span:nth-child(2) {
+  color: #D51243;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+#Section10 .all .mycard ul .btn-add {
+  text-align: center;
+  opacity: 0;
+  visibility: 0;
+}
+
+#Section10 .all .mycard ul .btn-add a {
+  background-color: #233A95 !important;
+  border-radius: 50px !important;
+  padding: 5px 30px !important;
+}
+
+#Section10 .all .mycard:hover {
+  overflow: visible;
+  z-index: 121;
+}
+
+#Section10 .all .mycard:hover .btn-add {
+  opacity: 1 !important;
+  z-index: 12;
+  visibility: 1 !important;
+}
+
+#Section10 .all .secondlg4 .top a {
+  display: block;
+  color: #4d4d4d;
+  margin: 20px;
+}
+
+#Section10 .all .secondlg4 .top a:hover {
+  color: #2BBEF9;
+}
+
+#Section10 .all .secondlg4 .bottom a {
+  color: #233A95;
+  margin-left: 20px;
+}
+
+#Section11 {
+  padding: 30px 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Section11 .cart .image {
+  position: relative;
+}
+
+#Section11 .cart .image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+#Section11 .cart .image .text {
+  position: absolute;
+  left: 8%;
+  top: 25%;
+}
+
+#Section11 .cart .image .text ul {
+  list-style: none;
+}
+
+#Section11 .cart .image .text ul li {
+  padding-left: 0;
+}
+
+#Section11 .cart .image .text ul li a {
+  text-align: center;
+  background-color: #C2C2D3;
+  color: white;
+  font-size: 14px;
+  padding: 8px 20px;
+  border-radius: 40px;
+}
+
+#Section11 .cart .image .text ul li a i {
+  margin-left: 5px;
+}
+
+#Section11 .cart .image .text ul li:nth-child(1) {
+  letter-spacing: -1px;
+}
+
+#Section11 .cart .image .text ul li:nth-child(2) {
+  font-weight: bold;
+  font-size: 25px;
+}
+
+#Section11 .cart .image .text ul .liweek {
+  color: #00B853;
+  font-weight: 500;
+}
+
+#Section12 {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Section12 .all {
+  border-radius: 10px;
+  border: 0.5px solid rgba(173, 173, 173, 0.596);
+  margin: 0;
+}
+
+#Section12 .all .left {
+  text-align: center;
+}
+
+#Section12 .all .left img {
+  width: 70%;
+}
+
+#Section12 .all .right ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+#Section12 .all .right ul li {
+  padding-left: 0;
+}
+
+#Section12 .all .right ul li span {
+  font-size: 12px;
+}
+
+#Section12 .all .right ul li:nth-child(1) {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+#Section12 .all .box {
+  padding: 10px 5px;
+  border-right: 0.5px solid rgba(173, 173, 173, 0.596);
+  border-bottom: 0.5px solid rgba(173, 173, 173, 0.596);
 }
 
 @media screen and (max-width: 576px) {
@@ -617,7 +916,7 @@ table {
     color: gray;
     margin-bottom: 20px;
   }
-  #Section3 .left p, #Section6 .left p {
+  #Section3 .left p, #Section6 .left p, #Section9 .left p {
     font-size: 10px;
     margin-top: 10px;
   }
@@ -652,6 +951,13 @@ table {
   #Section5 .text .middle .right {
     text-align: center;
     margin-top: 20px;
+  }
+  #Section8 .text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    grid-gap: 10px;
   }
 }
 
