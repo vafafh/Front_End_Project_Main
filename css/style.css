@@ -407,7 +407,6 @@ table {
 }
 
 #Section5 .text {
-  padding: 0 25px;
   border-radius: 10px;
   background-color: #F8EFEA;
   height: 100px;
@@ -486,6 +485,11 @@ table {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+#Section7 .all {
+  padding-left: 0 !important;
+  border: 1px solid red;
+}
+
 #Section7 .all .left-box {
   position: relative;
   border-top-left-radius: 10px;
@@ -528,27 +532,35 @@ table {
   border-radius: 40px;
 }
 
-#Section7 .all .product img {
-  width: 50%;
+#Section7 .all .mycard img {
+  width: 100%;
 }
 
-#Section7 .all .product .btn-cart {
+#Section7 .all .mycard .bottom-btn {
+  display: none;
+}
+
+#Section7 .all .mycard .bottom-btn .btn-cart {
   padding: 8px 60px;
   background-color: #FFCD00;
   border-radius: 40px;
 }
 
-#Section7 .all .product ul li i {
+#Section7 .all .mycard:hover .bottom-btn {
+  display: block;
+}
+
+#Section7 .all .mycard ul li i {
   font-size: 12px;
   color: #FFCD00;
 }
 
-#Section7 .all .product ul li:nth-child(3) span:nth-child(1) {
+#Section7 .all .mycard ul li:nth-child(3) span:nth-child(1) {
   color: gray;
   font-size: 12px;
 }
 
-#Section7 .all .product ul li:nth-child(3) span:nth-child(2) {
+#Section7 .all .mycard ul li:nth-child(3) span:nth-child(2) {
   color: #D51243;
   font-weight: bold;
   font-size: 14px;
