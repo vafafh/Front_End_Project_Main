@@ -1549,7 +1549,14 @@ header .header-4 .box-right .main-ul .dropdown-shop:hover .main-ul {
   header #Phone .header-top b {
     font-weight: bold;
   }
+  header #Phone .sticky {
+    position: fixed;
+    width: 100%;
+    top: 0;
+  }
   header #Phone .header-bottom {
+    background-color: white;
+    z-index: 77777;
     padding: 15px 0;
     border-bottom: 1px solid #e3e4e6;
   }
@@ -1577,7 +1584,7 @@ header .header-4 .box-right .main-ul .dropdown-shop:hover .main-ul {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 9999999999;
     top: 0;
     left: 0;
     background-color: white;
