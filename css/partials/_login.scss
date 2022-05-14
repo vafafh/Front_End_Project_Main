@@ -1,0 +1,56 @@
+#Login-Register {
+    font-family: Arial, Helvetica, sans-serif;
+    .all {
+        padding: 80px 20px;
+
+        .left,
+        .right {
+            h6{
+                font-weight: bold;
+            }
+            form {
+                label {
+                    font-size: 14px;
+                }
+
+                .input {
+                    outline: none;
+                    border: none;
+                    padding: 10px 10px;
+                    background-color: #F3F4F7;
+                    border-radius: 5px;
+                    margin: 10px 0 20px;
+
+                }
+
+                .bt-login,
+                .bt-register {
+                    text-align: center;
+                    width: 100px;
+                    border: 1px solid #233A95;
+                    background-color: #233A95;
+                    padding: 9px 6px;
+                    border-radius: 5px;
+                    color: white;
+                    margin: 20px 0;
+                }
+
+                .bt-register {
+                    margin: 5px 0 !important;
+
+                }
+
+                .txt {
+                    font-size: 14px;
+                    display: flex;
+                    align-items: center;
+                    column-gap: 10px;
+                }
+
+                p {
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}

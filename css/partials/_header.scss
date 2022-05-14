@@ -3,7 +3,7 @@ a {
 }
 
 header {
-       z-index: 55555555;
+       z-index: 55555;
     #Phone{
         display: none;
     }
@@ -286,7 +286,7 @@ header {
             /* Hidden by default */
             position: fixed;
             /* Stay in place */
-            z-index: 1;
+            z-index: 9999999;
             /* Sit on top */
             padding-top: 100px;
             /* Location of the box */

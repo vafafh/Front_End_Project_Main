@@ -987,7 +987,7 @@ a {
 }
 
 header {
-  z-index: 55555555;
+  z-index: 55555;
 }
 
 header #Phone {
@@ -1228,7 +1228,7 @@ header .header-3 .modal {
   /* Hidden by default */
   position: fixed;
   /* Stay in place */
-  z-index: 1;
+  z-index: 9999999;
   /* Sit on top */
   padding-top: 100px;
   /* Location of the box */
@@ -2324,5 +2324,70 @@ footer .footer-6 {
   #Send .rowall .all .sendus {
     width: 85%;
   }
+}
+
+#Login-Register {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Login-Register .all {
+  padding: 80px 20px;
+}
+
+#Login-Register .all .left h6,
+#Login-Register .all .right h6 {
+  font-weight: bold;
+}
+
+#Login-Register .all .left form label,
+#Login-Register .all .right form label {
+  font-size: 14px;
+}
+
+#Login-Register .all .left form .input,
+#Login-Register .all .right form .input {
+  outline: none;
+  border: none;
+  padding: 10px 10px;
+  background-color: #F3F4F7;
+  border-radius: 5px;
+  margin: 10px 0 20px;
+}
+
+#Login-Register .all .left form .bt-login,
+#Login-Register .all .left form .bt-register,
+#Login-Register .all .right form .bt-login,
+#Login-Register .all .right form .bt-register {
+  text-align: center;
+  width: 100px;
+  border: 1px solid #233A95;
+  background-color: #233A95;
+  padding: 9px 6px;
+  border-radius: 5px;
+  color: white;
+  margin: 20px 0;
+}
+
+#Login-Register .all .left form .bt-register,
+#Login-Register .all .right form .bt-register {
+  margin: 5px 0 !important;
+}
+
+#Login-Register .all .left form .txt,
+#Login-Register .all .right form .txt {
+  font-size: 14px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+          column-gap: 10px;
+}
+
+#Login-Register .all .left form p,
+#Login-Register .all .right form p {
+  font-size: 14px;
 }
 /*# sourceMappingURL=style.css.map */
