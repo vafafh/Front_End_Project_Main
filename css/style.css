@@ -137,11 +137,6 @@
 
 .klbth-icon-user:before {
   content: '\e807';
-  font-size: 20px;
-  padding: 9px 29px 9px 9px;
-  cursor: pointer;
-  border-radius: 100%;
-  border: 1px solid #d9d9e9;
 }
 
 .klbth-icon-shopping-bag:before {
@@ -176,6 +171,30 @@
   content: '\e84f';
   font-size: 18px;
   color: #cfcfcf;
+}
+
+.klbth-icon-home:before {
+  content: '\e864';
+}
+
+.klbth-icon-store:before {
+  content: '\e88d';
+}
+
+.klbth-icon-search:before {
+  content: '\e808';
+}
+
+.klbth-icon-heart-1:before {
+  content: '\e860';
+}
+
+.klbth-icon-user:before {
+  content: '\e807';
+}
+
+.klbth-icon-menu-thin:before {
+  content: '\e8b2';
 }
 
 /*#endregion Icons do not open it is too big press alt z*/
@@ -1180,6 +1199,14 @@ header .header-3 .center-right .box-input i {
   font-size: 20px;
 }
 
+header .header-3 .right .box-icon .box-1 .klbth-icon-user:before {
+  font-size: 20px;
+  padding: 9px 29px 9px 9px;
+  cursor: pointer;
+  border-radius: 100%;
+  border: 1px solid #d9d9e9;
+}
+
 header .header-3 .right .box-icon .box-3 i {
   font-size: 20px;
   position: relative;
@@ -1882,26 +1909,59 @@ footer .footer-4 .all {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-bottom: 0.5px solid rgba(184, 184, 184, 0.466);
   padding: 50px 0;
 }
 
-footer .footer-4 .all .left-box .left {
+footer .footer-4 .all .box-1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+footer .footer-4 .all .box-1 .left {
   padding: 0 20px;
 }
 
-footer .footer-4 .all .left-box .left i {
+footer .footer-4 .all .box-1 .left i {
   border-radius: 100%;
   border: 1px solid rgba(202, 202, 202, 0.527);
   padding: 9px 10px;
   font-size: 20px;
 }
 
-footer .footer-4 .all .right {
-  padding-left: 10px;
+footer .footer-4 .all .box-1 .right span:nth-child(1) {
+  font-weight: bold;
 }
 
-footer .footer-4 .all .right a {
+footer .footer-4 .all .box-1 .right span:nth-child(2) {
+  color: gray;
+}
+
+footer .footer-4 .all .box-2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+footer .footer-4 .all .box-3 {
+  padding-left: 10px;
+  text-align: end;
+}
+
+footer .footer-4 .all .box-3 a {
   border: 1px solid rgba(202, 202, 202, 0.527);
   border-radius: 100%;
   padding: 9px 10px;
@@ -1909,30 +1969,52 @@ footer .footer-4 .all .right a {
   color: #233A95;
 }
 
-footer .footer-4 .all .right a i {
+footer .footer-4 .all .box-3 a i {
   font-size: 14px;
 }
 
 footer .footer-5 {
   padding: 30px 0;
-  background-color: white !important;
 }
 
 footer .footer-5 .all {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   font-size: 13px;
   color: #b8b8b8;
 }
 
-footer .footer-5 .all .left {
-  margin-top: 10px;
+footer .footer-5 .all .right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 footer .footer-5 .all .right a {
   color: #b8b8b8;
-  margin-left: 10px;
+}
+
+footer .footer-6 {
+  display: none;
 }
 
 @media screen and (max-width: 576px) {
+  footer {
+    overflow: hidden;
+  }
   footer .footer-1 {
     padding-top: 30px;
   }
@@ -1976,17 +2058,103 @@ footer .footer-5 .all .right a {
     border-bottom: 0.5px solid rgba(184, 184, 184, 0.466);
     padding: 50px 0;
   }
-  footer .footer-4 .all .box .left {
-    padding: 0 20px;
+  footer .footer-4 .all .box-1 .left {
+    padding: 0;
+    padding-right: 20px;
   }
-  footer .footer-4 .all .box .left i {
+  footer .footer-4 .all .box-1 .left i {
     border-radius: 100%;
     border: 1px solid rgba(202, 202, 202, 0.527);
     padding: 9px 10px;
     font-size: 20px;
   }
+  footer .footer-4 .all .box-1 .right span:nth-child(1) {
+    font-weight: bold;
+  }
+  footer .footer-4 .all .box-2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  footer .footer-4 .all .box-2 .right {
+    margin-top: 10px;
+  }
   footer .footer-4 .all .box-3 {
-    text-align: end;
+    padding-left: 10px;
+    text-align: start;
+  }
+  footer .footer-4 .all .box-3 a {
+    border: 1px solid rgba(202, 202, 202, 0.527);
+    border-radius: 100%;
+    padding: 10px;
+    margin-left: 5px;
+    color: #233A95;
+  }
+  footer .footer-4 .all .box-3 a i {
+    font-size: 20px;
+  }
+  footer .footer-5 {
+    padding: 30px 0;
+  }
+  footer .footer-5 .all {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 13px;
+    color: #b8b8b8;
+  }
+  footer .footer-5 .all .right {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  footer .footer-5 .all .right a {
+    color: #b8b8b8;
+  }
+  footer .footer-5 .all .right .right-right {
+    display: none;
+  }
+  footer .footer-6 {
+    display: block;
+    background-color: #ffffff;
+    -webkit-box-shadow: -1px 2px 6px 1px rgba(161, 150, 150, 0.75);
+            box-shadow: -1px 2px 6px 1px rgba(161, 150, 150, 0.75);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 0;
+  }
+  footer .footer-6 .all ul li {
+    text-align: center;
+  }
+  footer .footer-6 .all ul li a {
+    color: #bdbdbd;
+  }
+  footer .footer-6 .all ul li a i {
+    display: block;
+    font-size: 20px;
+  }
+  footer .footer-6 .all ul li a span {
+    font-size: 11px;
   }
 }
 /*# sourceMappingURL=style.css.map */

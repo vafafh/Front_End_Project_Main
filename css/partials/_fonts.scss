@@ -143,11 +143,7 @@
 
 .klbth-icon-user:before {
     content: '\e807';
-    font-size: 20px;
-    padding: 9px 29px 9px 9px;
-    cursor: pointer;
-    border-radius: 100%;
-    border: 1px solid #d9d9e9;
+    
 }
 
 .klbth-icon-shopping-bag:before {
@@ -185,7 +181,24 @@
     font-size: 18px;
     color: rgb(207, 207, 207);
 }
-
+.klbth-icon-home:before {
+    content: '\e864';
+}
+.klbth-icon-store:before {
+    content: '\e88d';
+}
+.klbth-icon-search:before {
+    content: '\e808';
+}
+.klbth-icon-heart-1:before {
+    content: '\e860';
+}
+.klbth-icon-user:before {
+    content: '\e807';
+}
+.klbth-icon-menu-thin:before {
+    content: '\e8b2';
+}
 
 
 
