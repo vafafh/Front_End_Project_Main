@@ -2146,7 +2146,7 @@ footer .footer-6 {
     -webkit-box-shadow: -1px 2px 6px 1px rgba(161, 150, 150, 0.75);
             box-shadow: -1px 2px 6px 1px rgba(161, 150, 150, 0.75);
     position: fixed;
-    bottom: 0;
+    bottom: -2px;
     width: 100%;
     padding: 10px 0;
   }
@@ -2162,6 +2162,167 @@ footer .footer-6 {
   }
   footer .footer-6 .all ul li a span {
     font-size: 11px;
+  }
+}
+
+#GetInToch {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 70px 0 50px;
+  background-color: white;
+}
+
+#GetInToch .all {
+  text-align: center;
+}
+
+#GetInToch .all h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+#GetInToch .all p {
+  color: gray;
+}
+
+#Boxs {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  padding-bottom: 50px;
+}
+
+#Boxs .all .box {
+  width: 90%;
+  border-radius: 10px;
+  margin: auto;
+  background-color: #F3F3F6;
+  padding: 30px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#Boxs .all .box h5 {
+  font-weight: bold;
+}
+
+#Boxs .all .box i,
+#Boxs .all .box h5,
+#Boxs .all .box p {
+  margin: 10px 0;
+}
+
+#Boxs .all .box i {
+  font-size: 40px;
+  color: #233A95;
+}
+
+#Boxs .all .box .klbth-icon-mail:before {
+  font-size: 40px;
+  color: #233A95;
+}
+
+#Send {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#Send .rowall {
+  padding: 0 35px;
+}
+
+#Send .rowall .all {
+  padding: 100px 0;
+  background-color: white;
+  border-radius: 10px;
+  -webkit-box-shadow: 0px 1px 34px -13px rgba(194, 191, 191, 0.75);
+          box-shadow: 0px 1px 34px -13px rgba(194, 191, 191, 0.75);
+}
+
+#Send .rowall .all .sendus {
+  width: 70%;
+  margin: auto;
+}
+
+#Send .rowall .all .sendus .top {
+  text-align: center;
+  padding-bottom: 50px;
+  border-bottom: 1px solid #c5c5c5;
+}
+
+#Send .rowall .all .sendus .top h1 {
+  font-size: 45px;
+  margin-bottom: 10px;
+}
+
+#Send .rowall .all .sendus .top p {
+  color: gray;
+  font-weight: 100;
+}
+
+#Send .rowall .all .sendus .bottom {
+  padding-top: 50px;
+}
+
+#Send .rowall .all .sendus .bottom form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#Send .rowall .all .sendus .bottom form label {
+  margin-bottom: 10px;
+  font-size: 14px;
+}
+
+#Send .rowall .all .sendus .bottom form .left input,
+#Send .rowall .all .sendus .bottom form .right input {
+  padding: 15px 10px;
+  width: 100%;
+  background-color: #F3F4F7;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+}
+
+#Send .rowall .all .sendus .bottom form .center1 input,
+#Send .rowall .all .sendus .bottom form .center1 textarea,
+#Send .rowall .all .sendus .bottom form .center2 input,
+#Send .rowall .all .sendus .bottom form .center2 textarea {
+  padding: 15px 10px;
+  width: 100%;
+  background-color: #F3F4F7;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  resize: none;
+}
+
+#Send .rowall .all .sendus .bottom form .center1 button,
+#Send .rowall .all .sendus .bottom form .center2 button {
+  background-color: #233A95;
+  padding: 10px 20px;
+  color: white;
+  margin-top: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  #Send .rowall {
+    padding: 0;
+  }
+  #Send .rowall .all {
+    padding: 30px 0;
+  }
+  #Send .rowall .all .sendus {
+    width: 85%;
   }
 }
 /*# sourceMappingURL=style.css.map */

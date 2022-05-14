@@ -1,0 +1,170 @@
+#GetInToch {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 70px 0 50px;
+    background-color: rgb(255, 255, 255);
+
+    .all {
+        text-align: center;
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 10px;
+        }
+
+        p {
+            color: gray;
+        }
+
+    }
+}
+
+#Boxs {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(255, 255, 255);
+    padding-bottom: 50px;
+
+    .all {
+        .box {
+            width: 90%;
+            border-radius: 10px;
+            margin: auto;
+            background-color: #F3F3F6;
+            padding: 30px 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h5 {
+                font-weight: bold;
+            }
+
+            i,
+            h5,
+            p {
+                margin: 10px 0;
+            }
+
+            i {
+                font-size: 40px;
+                color: #233A95;
+            }
+
+            .klbth-icon-mail:before {
+                font-size: 40px;
+                color: #233A95;
+            }
+        }
+    }
+}
+
+#Send {
+    font-family: Arial, Helvetica, sans-serif;
+
+    .rowall {
+        padding: 0 35px;
+
+        .all {
+            padding: 100px 0;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            box-shadow: 0px 1px 34px -13px rgba(194, 191, 191, 0.75);
+
+            .sendus {
+                width: 70%;
+                margin: auto;
+
+                .top {
+                    text-align: center;
+                    padding-bottom: 50px;
+                    border-bottom: 1px solid rgb(197, 197, 197);
+
+                    h1 {
+                        font-size: 45px;
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        color: gray;
+                        font-weight: 100;
+                    }
+                }
+
+                .bottom {
+                    padding-top: 50px;
+
+                    form {
+                        display: flex;
+                        justify-content: space-between;
+
+                        label {
+                            margin-bottom: 10px;
+                            font-size: 14px;
+                        }
+
+                        .left,
+                        .right {
+
+
+                            input {
+                                padding: 15px 10px;
+                                width: 100%;
+                                background-color: #F3F4F7;
+                                outline: none;
+                                border: none;
+                                border-radius: 5px;
+                            }
+                        }
+
+                        .center1,
+                        .center2 {
+
+                            input,
+                            textarea {
+                                padding: 15px 10px;
+                                width: 100%;
+                                background-color: #F3F4F7;
+                                outline: none;
+                                border: none;
+                                border-radius: 5px;
+                                resize: none;
+
+                            }
+
+                            button {
+                                background-color: #233A95;
+                                padding: 10px 20px;
+                                color: white;
+                                margin-top: 20px;
+                            }
+                        }
+
+
+                    }
+                }
+            }
+
+
+
+        }
+    }
+
+
+}
+
+@media screen and (max-width: 576px) {
+    #Send {
+        .rowall {
+            padding: 0;
+
+            .all {
+                padding: 30px 0;
+
+                .sendus {
+                    width: 85%;
+                }
+
+            }
+        }
+
+    }
+}
