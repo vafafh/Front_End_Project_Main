@@ -1486,6 +1486,8 @@ header .header-4 .box-right .main-ul .dropdown-home ul {
   cursor: pointer;
   font-size: 14px;
   top: 86px;
+  -webkit-transition: .3s;
+  transition: .3s;
   left: -20px;
   -webkit-box-shadow: 0px 1px 19px -10px rgba(148, 148, 148, 0.75);
           box-shadow: 0px 1px 19px -10px rgba(148, 148, 148, 0.75);
@@ -2405,6 +2407,10 @@ footer .footer-6 {
 
 #ProductList {
   font-family: Arial, Helvetica, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 #ProductList .all {
@@ -2413,14 +2419,16 @@ footer .footer-6 {
 
 #ProductList .all .left table tbody .td-quantity span:nth-child(1) {
   background-color: #EDEEF5;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #ProductList .all .left table tbody .td-quantity span:nth-child(3) {
   background-color: #EDEEF5;
-  padding: 5px;
+  padding: 5px 10px;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 #ProductList .all .right {

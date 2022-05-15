@@ -1,7 +1,9 @@
 let allAddButtons=document.querySelectorAll(".addToCartBtn");
 let basketCount=document.getElementById('basketCount');
 let table=document.getElementById('tbl-basket');
-
+let emptyBasket=document.getElementById("emptybasket");
+let processedSubTotal=document.getElementById("processed-sub-total");
+let processedTotal=document.getElementById("processed-total")
 
     if(!localStorage.getItem('basket')){
         localStorage.setItem('basket',JSON.stringify([])); 
@@ -36,6 +38,7 @@ allAddButtons.forEach(btn=>{
        }
 
        localStorage.setItem('basket',JSON.stringify(basket));
+      
        WriteBasketCount(); 
     }
 
@@ -58,6 +61,7 @@ function GetBasketElement(){
       if(basket.length>0){
             table.classList.remove('d-none');
             basket.forEach(product => {
+            let prod_id=product.id
             let name=product.name;
             let prod_count=product.count;
             let price=product.price;
@@ -69,15 +73,15 @@ function GetBasketElement(){
             <th scope="row">${count}</th>
             <td scope="row"><img style="width: 20%;" src="${imgsrc}"  alt=""></td>
             <td>${name.split(' ')[2]}</td>
-            <td>$${Number(price).toFixed(1)}</td></td>
+            <td>$${Number(price).toFixed(2)}</td></td>
             <td class="td-quantity">
-            <span class="btn-minus"><i class="klbth-icon-minus"></i></span>
-            <span>${prod_count}</span>
-            <span class="btn-plus"><i class="klbth-icon-plus"></i></span>
+                <span data-id=${prod_id} class="btn-minus">-</span>
+                <span>${prod_count}</span>
+                <span data-id=${prod_id} class="btn-plus">+</span>
            
             </td>
-            <td>$${Number(totalprice).toFixed(1)}</td>
-            <td><i class="klbth-icon-cancel"></i></td>
+            <td class="eachProductTotal">$${Number(totalprice).toFixed(2)}</td>
+            <td><i style="cursor:pointer" class="removeProductTr klbth-icon-cancel"></i></td>
           </tr>`
          
        
@@ -105,10 +109,40 @@ function IncreaseDecrease(){
                     
                     if(Number(e.target.nextElementSibling.innerText)>1){
                           let product_count=Number(e.target.nextElementSibling.innerText)-1;
+                          let current_product_total_price=e.target.parentElement.previousElementSibling.innerText;
+
+                          e.target.parentElement.nextElementSibling.innerText=
+                          `$${(Number(product_count)*Number(current_product_total_price.slice(current_product_total_price.indexOf("$")+1,current_product_total_price.length))).toFixed(1)}`;
                           e.target.nextElementSibling.innerText=product_count;
+                          
+                          let basket=JSON.parse(localStorage.getItem("basket"));
+                          let product= basket.find(product=>product.id==e.target.getAttribute("data-id"));
+                          product.count--;
+                          let newArr= [];
+                          basket.map(item=>{
+                              if(item.id==product.id){
+                                item=product;
+                              }
+                                newArr.push(item)
+                          })
+                          localStorage.setItem("basket",JSON.stringify(newArr));
+
+                          Calculateprocessed();
+
+                          
                     }
                     else{
+                        let basket= JSON.parse(localStorage.getItem("basket"));
+                        let id=Number(e.target.getAttribute("data-id"));
+                        let newBasket=basket.filter(product=>product.id!=id);
+                        basket=newBasket;
+                        if(basket.length<1){
+                            table.classList.add('d-none');
+                            emptyBasket.classList.add("d-none");
+                        }
+                        localStorage.setItem("basket",JSON.stringify(basket));
                         document.getElementById('table-tr').remove();
+                        WriteBasketCount();
                     }
                   
                 }
@@ -116,16 +150,55 @@ function IncreaseDecrease(){
            
            plusbtns.forEach(plusbtn=>{
             plusbtn.onclick=function(e){
-                 console.log(e.target.previousElementSibling.innerText);
                 let product_count=Number(e.target.previousElementSibling.innerText)+1;
+
+                let current_product_total_price=e.target.parentElement.previousElementSibling.innerText;
+
+                e.target.parentElement.nextElementSibling.innerText=
+                `$${(Number(product_count)*Number(current_product_total_price.slice(current_product_total_price.indexOf("$")+1,current_product_total_price.length))).toFixed(1)}`;
                 e.target.previousElementSibling.innerText=product_count;
+
+                let basket=JSON.parse(localStorage.getItem("basket"));
+                let product= basket.find(product=>product.id==e.target.getAttribute("data-id"));
+                product.count++;
+                let newArr= [];
+                basket.map(item=>{
+                    if(item.id==product.id){
+                      item=product;
+                    }
+                      newArr.push(item)
+                })
+                localStorage.setItem("basket",JSON.stringify(newArr));
+                Calculateprocessed();
               }
            })
 }
 
 IncreaseDecrease();
 
+function Calculateprocessed() {
+    let eachProductTotal=document.querySelectorAll(".eachProductTotal");
+    let processedTotalPrice=0;
+    eachProductTotal.forEach(item=>{
+    processedTotalPrice+=Math.ceil(item.innerText.slice(item.innerText.indexOf("$")+1,item.innerText.length));
+      
+})
+    processedSubTotal.innerText=`$${processedTotalPrice}`;
+    processedTotal.innerText=`$${processedTotalPrice}`;
+    
+}
+Calculateprocessed()
 
+function RemoveProductTr(){
+    let cancelButtons=document.querySelectorAll(".removeProductTr");
+   cancelButtons.forEach(cancelButton=>{
+    cancelButton.onclick=function(e){
+        e.target.parentElement.parentElement.remove();
+    }
+   })
+   
+}
+RemoveProductTr();
 // let price="$103457349853798";
 // console.log(price.indexOf("$"))
 // console.log(price.slice(price.indexOf("$")+1,price.length))
