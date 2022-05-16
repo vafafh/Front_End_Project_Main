@@ -441,7 +441,7 @@ header {
                 cursor: pointer;
                 background-color: rgb(255, 255, 255);
                 border:  1px solid #e3e4e6;
-                width: 300px;
+                width: 300px !important;
                 top: 69px;
                 left: 2px;
                 padding: 20px 0;
@@ -837,7 +837,7 @@ header {
                             cursor: pointer;
                             background-color: rgb(255, 255, 255);
                             // border:  1px solid #e3e4e6;
-                            width: 100%;
+                            width: 100% !important;
                             top: 69px;
                             left: 2px;
                             padding: 20px 0;

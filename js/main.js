@@ -53,12 +53,12 @@ window.onclick = function(event) {
 
 
 $("#allcategory1").click(function(){
-      $(".dropdown-category").toggle()
+      $(".dropdown-category").toggle("slow")
      
 })
 
 $("#allcategory2").click(function(){
-  $(".dropdown-category").toggle()
+  $(".dropdown-category").toggle("300")
  
 })
 
@@ -80,7 +80,7 @@ $('.slider').slick({
   // dots: true,
   infinite: true,
   speed: 300,
-  // autoplay:true,
+  autoplay:true,
   slidesToShow: 5,
   slidesToScroll: 2,
   arrows:true,
