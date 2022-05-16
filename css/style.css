@@ -385,21 +385,29 @@ table {
   margin-bottom: 20px;
 }
 
-#Section3, #Section6, #Section9 {
+#Section3,
+#Section6,
+#Section9 {
   font-family: Arial, Helvetica, sans-serif;
 }
 
-#Section3 .left h5, #Section6 .left h5, #Section9 .left h5 {
+#Section3 .left h5,
+#Section6 .left h5,
+#Section9 .left h5 {
   font-weight: bold;
 }
 
-#Section3 .left p, #Section6 .left p, #Section9 .left p {
+#Section3 .left p,
+#Section6 .left p,
+#Section9 .left p {
   font-size: 13px;
   margin-top: 10px;
   color: gray;
 }
 
-#Section3 .right a, #Section6 .right a, #Section9 .right a {
+#Section3 .right a,
+#Section6 .right a,
+#Section9 .right a {
   text-align: center;
   color: #707070;
   font-size: 14px;
@@ -408,7 +416,9 @@ table {
   border-radius: 40px;
 }
 
-#Section3 .right a i, #Section6 .right a i, #Section9 .right a i {
+#Section3 .right a i,
+#Section6 .right a i,
+#Section9 .right a i {
   margin-left: 5px;
 }
 
@@ -542,9 +552,18 @@ table {
   border-radius: 40px;
 }
 
+#Section7 .all .cardheight {
+  height: 330px;
+  overflow-y: hidden;
+}
+
+#Section7 .all .cardheight:hover {
+  overflow-y: visible;
+  z-index: 9999999999999999;
+}
+
 #Section7 .all .mycard {
   cursor: pointer;
-  overflow: hidden;
 }
 
 #Section7 .all .mycard ul li {
@@ -589,26 +608,15 @@ table {
 }
 
 #Section7 .all .mycard ul .btn-add {
+  padding: 10px 0px 0px 0px;
   text-align: center;
-  opacity: 0;
-  visibility: 0;
+  background-color: white;
 }
 
 #Section7 .all .mycard ul .btn-add a {
   background-color: #233A95 !important;
   border-radius: 50px !important;
   padding: 5px 30px !important;
-}
-
-#Section7 .all .mycard:hover {
-  overflow: visible;
-  z-index: 121;
-}
-
-#Section7 .all .mycard:hover .btn-add {
-  opacity: 1 !important;
-  z-index: 12;
-  visibility: 1 !important;
 }
 
 #Section7 .all .secondlg4 .top a {
@@ -717,9 +725,18 @@ table {
   border-radius: 40px;
 }
 
+#Section10 .all .cardheight {
+  height: 330px;
+  overflow-y: hidden;
+}
+
+#Section10 .all .cardheight:hover {
+  overflow-y: visible;
+  z-index: 9999999999999999;
+}
+
 #Section10 .all .mycard {
   cursor: pointer;
-  overflow: hidden;
 }
 
 #Section10 .all .mycard ul li {
@@ -764,26 +781,15 @@ table {
 }
 
 #Section10 .all .mycard ul .btn-add {
+  padding: 10px 0px 0px 0px;
   text-align: center;
-  opacity: 0;
-  visibility: 0;
+  background-color: white;
 }
 
 #Section10 .all .mycard ul .btn-add a {
   background-color: #233A95 !important;
   border-radius: 50px !important;
   padding: 5px 30px !important;
-}
-
-#Section10 .all .mycard:hover {
-  overflow: visible;
-  z-index: 121;
-}
-
-#Section10 .all .mycard:hover .btn-add {
-  opacity: 1 !important;
-  z-index: 12;
-  visibility: 1 !important;
 }
 
 #Section10 .all .secondlg4 .top a {
@@ -949,7 +955,9 @@ table {
     color: gray;
     margin-bottom: 20px;
   }
-  #Section3 .left p, #Section6 .left p, #Section9 .left p {
+  #Section3 .left p,
+  #Section6 .left p,
+  #Section9 .left p {
     font-size: 10px;
     margin-top: 10px;
   }
