@@ -2522,6 +2522,10 @@ footer .footer-6 {
           column-gap: 10px;
 }
 
+#ProductList .all .emptybasket {
+  display: block;
+}
+
 #ProductList .all .emptybasket div {
   margin: 30px 0;
 }

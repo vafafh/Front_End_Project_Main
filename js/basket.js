@@ -128,6 +128,9 @@ function IncreaseDecrease(){
                           localStorage.setItem("basket",JSON.stringify(newArr));
 
                           Calculateprocessed();
+                          RemoveTable();
+                          CalculateTotal();
+                          
 
                           
                     }
@@ -141,8 +144,11 @@ function IncreaseDecrease(){
                             emptyBasket.classList.add("d-none");
                         }
                         localStorage.setItem("basket",JSON.stringify(basket));
+                        RemoveTable();
                         document.getElementById('table-tr').remove();
                         WriteBasketCount();
+                        CalculateTotal();
+                       
                     }
                   
                 }
@@ -170,6 +176,7 @@ function IncreaseDecrease(){
                 })
                 localStorage.setItem("basket",JSON.stringify(newArr));
                 Calculateprocessed();
+                CalculateTotal();
               }
            })
 }
@@ -195,13 +202,36 @@ function RemoveProductTr(){
     cancelButton.onclick=function(e){
         e.target.parentElement.parentElement.remove();
     }
+    RemoveTable();
    })
    
 }
 RemoveProductTr();
-// let price="$103457349853798";
-// console.log(price.indexOf("$"))
-// console.log(price.slice(price.indexOf("$")+1,price.length))
+
+function RemoveTable() {
+    let basket=JSON.parse(localStorage.getItem("basket"));
+    if(basket.length<1){
+        table.style.display="none";
+        document.getElementById("totaltable").style.display="none"
+       
+    }
+    else{
+        emptyBasket.style.display="none"
+        document.getElementById("totaltable").style.display="block"
+    }
+}
+RemoveTable();
+
+function CalculateTotal(){
+    let total=0
+    let basket=JSON.parse(localStorage.getItem("basket"));
+    basket.forEach(item=>{
+        total+=Number(item.price)*Number(item.count)
+    })
+    document.getElementById("totalid").innerText=total.toFixed(2);
+}
+
+CalculateTotal();
 
 
 
